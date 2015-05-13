@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html data-ng-app="tupcb">
+    <head>
+        <title>TuPCB</title>        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="shortcut icon"
+              href="images/encabezado.png" />
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  
+        <script src="js/proyectos.js"></script>              
+        
+        <!-- Bootstrap CSS -->     
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> 
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>        
+        <link href="css/pcb_common.css" rel="stylesheet" type="text/css"/>        
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="css/proyectos.css">
+    </head>
+    
+    <body>
+        <!--  Header  -->
+
+        <div class="pcb-top-header" role="navigation">
+                <img class="pcb-top-image" src="images/encabezado.png" alt=""/>
+            </div>
+            
+            <nav class="navbar navbar-default pcb-navbar" role="navigation">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-left" id="bs-example-navbar-collapse-1">
+                    <ul data-ng-controller="NavbarController" class="nav navbar-nav">
+                        <li data-ng-class="{'active':getClass('/')}" class="pcb-li">
+                            <a href="#/home">Inicio</a></li>
+                        <li data-ng-class="{'active':getClass('/empresa')}" class="pcb-li">
+                            <a href="#/empresa">Nosotros</a></li>
+                        <li data-ng-class="{'active':getClass('/servicios')}" class="pcb-li">
+                            <a href="#/servicios">Servicios</a></li>
+                        <li data-ng-class="{'active':getClass('/cotizar')}" class="pcb-li">
+                            <a href="#/cotizar">Cotizar</a></li>
+                        <li data-ng-class="{'active':getClass('/contacto')}" class="pcb-li">
+                            <a href="#/contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        <div>
+            <div data-ng-view></div>
+        </div>
+        <!-- Container  -->
+<!--         <div id="viewConteiner" data-ng-view=""></div> -->
+        
+        <!--  Footer  -->
+        <footer class="pcb-footer">
+                <div class="container">
+                    <div class="pcb-footer-left-div col-lg-6 col-md-6 col-sm-6 col-xs-12">                 
+
+                        <br>
+                        <p>Copyright © 2015 TuPCB</p>
+                            <div data-ng-controller="NavbarController" class="col-lg-9 col-md-9">
+                                <a href="#/avisoprivacidad">Aviso de privacidad</a>
+                            </div>
+                        <br>                  
+                    </div>
+                    <div class="pcb-footer-right-div col-lg-6 col-md-6 col-sm-6 col-xs-12">                        
+                        <h4>Contáctanos:</h4>                        
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><img src="images/pcb-footer-phone-icon.png" alt=""/></td>
+                                    <td>331 234 5678 / 339 876 5432</td>
+                                </tr>
+                            </tbody>
+                        </table>                        
+                        
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><img src="images/pcb-footer-email-icon.png" alt=""/></td>
+                                    <td>contacto@tupcb.com</td>                                
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </footer> 
+        
+        
+        <!--  Scripts     -->
+        <script src="js/angular.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script> 
+        
+        <!-- UI Libs -->
+        <script src="js/bootstrap.min.js"></script>
+        
+        <!-- App libs -->
+        <script src="js/script.js"></script>
+
+        <script>
+            function rotar_imagen_vertical(elm){
+                $('#' + elm).attr("src","images/compomentes/"+ elm +"v.png");
+            }
+            function rotar_imagen_horizontal(elm){
+                $('#' + elm).attr("src","images/compomentes/"+ elm +"h.png");
+            }
+        </script>
+        <script>
+            var tupcb = angular.module('tupcb',[]);
+                tupcb.config( function($routeProvider) {
+                    $routeProvider
+                        .when('/',
+                            {
+                                //controller:'SimpleController',
+                                templateUrl: 'app/partials/home.html'
+                            })
+                        .when('/empresa',
+                            {
+                                templateUrl: 'app/partials/empresa.html'
+                            })
+                        .when('/servicios',
+                            {
+                                templateUrl: 'app/partials/servicios.html'
+                            })
+                        .when('/cotizar',
+                            {
+                                controller:'Cotizar',
+                                templateUrl: 'app/partials/cotizar.html'
+                            })
+                        .when('/contacto',
+                            {
+                                controller:'Contacto',
+                                templateUrl: 'app/partials/contacto.html'
+                            })
+                        .when('/desarrollo',
+                            {
+                                templateUrl: 'app/partials/desarrollo.html'
+                            })
+                        .when('/manufactura',
+                            {
+                                templateUrl: 'app/partials/manufactura.html'
+                            })
+                        .when('/avisoprivacidad',
+                            {
+                                templateUrl: 'app/partials/avisoprivacidad.html'
+                            })
+                        .otherwise({ redirectTo: '/'});
+                });
+            var controllers={};
+            tupcb.controller(controllers);
+        </script>
+        <script src="app/controllers/controllers.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+			.boton{
+                color: #000000;
+                padding: 10px 50px 10px 50px;
+                background-color: #00A096;
+                font-family: Comic Sans MS, Calibri, Arial;
+                font-size: 20px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            #espacio{
+                height: 2px;
+                width: 76px;
+            }
+            #espacio_botones{
+                height: 13px;
+            }
+            #zonadestino{
+                float: left;
+                width: 100%;
+                height: 836px;
+                margin:1px;
+                border:1px solid #00A096;
+            }
+            #posicionDestino{
+                float: left;
+                width: 76px;
+                height: 76px;
+                
+            }
+            #zonadedestino{
+                float: left;
+                width: 100%;
+                height: 100px;
+                margin:1px;
+                border:1px solid #00A096;
+            }

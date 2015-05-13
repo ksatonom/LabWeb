@@ -1,0 +1,201 @@
+
+
+body{
+    font-family: calibri;
+}
+
+div.pcb-wrapper{
+    background-color: black;  
+    //background-image:url(../images/skewed_print.png);
+    //background-image:url(../images/dark_wall.png);
+    background-image:url(../images/patterns/black_mamba.png);
+    //background-image:url(../images/footer_lodyas.png);
+    //background-image:url(../images/congruent_outline.png);
+    //background-image:url(../images/zwartevilt.png);
+    //background-image:url(../images/tweed.png);
+    //background-image:url(../images/binding_dark.png);
+    //background-image:url(../images/escheresque_ste.png);
+    //background-image:url(../images/black_lozenge.png);
+    //background-image:url(../images/rebel.png);
+    //background-image:url(../images/micro_carbon.png);
+
+}
+
+h1.pcb-h1-centered{
+    text-align: center;
+    color: rgb(0,160,150);
+}
+
+h1.pcb-h1-left{
+    text-align: left;
+    color: rgb(0,160,150);
+}
+
+h2.pcb-h2-centered{    
+    text-align: center;
+    color: rgb(0,160,150);
+}
+
+h2.pcb-h2-left{
+    text-align: left;
+    color: rgb(0,160,150);
+}
+
+h3.pcb-h3-centered{
+    text-align: center;
+    color: rgb(0,160,150);
+}
+
+h3.pcb-h3-left{
+    text-align: left;
+    color: rgb(0,160,150);
+}
+
+
+p.pcb-p-larger{
+    font-size: large;    
+}
+
+p.pcb-p-centered{
+    text-align: center;
+}
+
+p.pcb-p-with-top-margin{
+    margin-top: 10px;
+}
+
+div.pcb-top-header{
+    background-color: white;
+}
+
+div.pcb-content-div{
+    background-color: white;
+    //height: 100vh;
+}
+
+div.pcb-centered-content-div{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*Barra de menu*/
+nav.pcb-navbar{
+    margin-bottom: 0px;    
+    border-radius: 0px;
+    background-image: none;
+    border: none;        
+    background-color: rgb(0,160,150);
+    box-shadow: none;       
+}
+
+/*Elementos del menu*/
+.pcb-navbar li{
+//    border: none;
+//    border-bottom-width: 4px;
+    background-color: rgb(0,160,150);
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+}
+
+
+/*Pestana del menu sobre la que se encuentra el mouse*/
+.pcb-navbar li.pcb-li:hover {
+    background-color: teal;
+    //border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+}
+
+/*Pestana seleccionada del menu*/
+li.pcb-li-active {     
+    background-color: white;
+}
+
+/*Texto de las pestanas sobre la que se encuentra el mouse*/
+.pcb-navbar li.pcb-li-active  a {    
+    color: teal;
+    font-weight: bold;
+}
+
+.pcb-navbar li.pcb-li  a {    
+    color:white;
+}
+
+.pcb-navbar li.pcb-li-active:hover{    
+    background-color: whitesmoke;
+}
+.pcb-navbar li.pcb-li:hover  a {    
+    color:white;
+}
+
+footer.pcb-footer{
+    background-color: rgb(64,64,64);
+    color: white;
+    
+    border-top: rgb(0,160,150);
+    border-top-width: 2px;
+    border-style: solid;
+    
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    //background-image:url(../images/skewed_print.png);
+}
+
+footer.pcb-footer p{
+    margin-top: 10px;
+}
+
+footer.pcb-footer h4{
+    margin-top: 10px;
+}
+
+div.pcb-footer-left-div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.pcb-footer-right-div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.pcb-footer-right-div p{
+    //margin-top: 0px;
+    //margin-bottom: 0px;
+}
+
+footer.pcb-footer a{
+    color: rgb(0,160,150);
+}
+
+footer.pcb-footer td{
+    vertical-align: central;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.pcb-carousel-caption {
+    top: 10%;
+    bottom: 10%;    
+}
+
+#car-left, #car-right{
+    background-image: none;    
+}
+
+img.pcb-top-image{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.pcb-link-button{
+    background-color: rgb(0,160,150);
+    font-size: large;
+    border: 2px solid white;
+}
+
+.pcb-link-button:hover{
+    background-color: teal;    
+}
